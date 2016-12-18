@@ -16,12 +16,12 @@ class BaseScalaSpec  extends FlatSpec{
     assert(stack.pop() === 1)
   }
 
-  it should "throw NoSuchElementException if an empty stack is popped" in {
-    val emptyStack = new Stack[String]
-    assertThrows[NoSuchElementException] {
-      emptyStack.pop()
-    }
-  }
+//  it should "throw NoSuchElementException if an empty stack is popped" in {
+//    val emptyStack = new Stack[String]
+//    assertThrows[NoSuchElementException] {
+//      emptyStack.pop()
+//    }
+//  }
 
   "A Tuple" should "can use _1 _2 _... to access" in {
     val t = Tuple3(1, "hello", Console)
