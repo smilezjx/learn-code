@@ -19,7 +19,12 @@ libraryDependencies ++= Seq(
   "org.apache.hadoop" % "hadoop-common" % "2.7.0" exclude ("org.apache.hadoop","hadoop-yarn-server-web-proxy"),
   "org.apache.spark" % "spark-sql_2.10" % "1.6.0" exclude ("org.apache.hadoop","hadoop-yarn-server-web-proxy"),
   "org.apache.spark" % "spark-hive_2.10" % "1.6.0" exclude ("org.apache.hadoop","hadoop-yarn-server-web-proxy"),
-  "org.apache.spark" % "spark-yarn_2.10" % "1.6.0" exclude ("org.apache.hadoop","hadoop-yarn-server-web-proxy")
+  "org.apache.spark" % "spark-yarn_2.10" % "1.6.0" exclude ("org.apache.hadoop","hadoop-yarn-server-web-proxy"),
+  "org.apache.kafka" % "kafka_2.10" % "0.8.0"
+    exclude("javax.jms", "jms")
+    exclude("com.sun.jdmk", "jmxtools")
+    exclude("com.sun.jmx", "jmxri")
+    exclude("org.slf4j", "slf4j-simple")
 )
 
 parallelExecution in Test := false
